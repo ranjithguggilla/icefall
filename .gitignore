@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+*.egg-info/
+build/
+dist/
+.venv/
+.DS_Store
+
+# trained app bundle, rebuilt by `icefall` (about 2 MB)
+outputs/bundle.joblib
+
+# local helper, not part of the published tree
+publish.sh
+ci/
