@@ -1,0 +1,524 @@
+{
+  "data": {
+    "climbers": 60521,
+    "expeditions": 10276,
+    "peaks": 387,
+    "first_year": 1950,
+    "last_year": 2019,
+    "summit_rate": 0.314899,
+    "death_rate": 0.012905,
+    "splits": {
+      "train": {
+        "rows": 41933,
+        "expeditions": 6362,
+        "summit_rate": 0.275129,
+        "years": [
+          1950,
+          2008
+        ]
+      },
+      "valid": {
+        "rows": 9162,
+        "expeditions": 2057,
+        "summit_rate": 0.38998,
+        "years": [
+          2009,
+          2013
+        ]
+      },
+      "test": {
+        "rows": 9426,
+        "expeditions": 1857,
+        "summit_rate": 0.418842,
+        "years": [
+          2014,
+          2019
+        ]
+      }
+    }
+  },
+  "selection": {
+    "chosen": "boosting",
+    "table": [
+      {
+        "model": "lookup",
+        "valid_log_loss": 0.64389,
+        "se": 0.00724,
+        "valid_auc": 0.63267,
+        "valid_brier": 0.22617,
+        "valid_ece": 0.01357
+      },
+      {
+        "model": "logistic",
+        "valid_log_loss": 0.64393,
+        "se": 0.00716,
+        "valid_auc": 0.65488,
+        "valid_brier": 0.22618,
+        "valid_ece": 0.05764
+      },
+      {
+        "model": "logistic_loose",
+        "valid_log_loss": 0.64723,
+        "se": 0.00708,
+        "valid_auc": 0.64981,
+        "valid_brier": 0.22749,
+        "valid_ece": 0.061
+      },
+      {
+        "model": "boosting",
+        "valid_log_loss": 0.61705,
+        "se": 0.00773,
+        "valid_auc": 0.68318,
+        "valid_brier": 0.21486,
+        "valid_ece": 0.01362
+      },
+      {
+        "model": "boosting_deep",
+        "valid_log_loss": 0.62376,
+        "se": 0.00943,
+        "valid_auc": 0.67887,
+        "valid_brier": 0.21701,
+        "valid_ece": 0.03243
+      }
+    ]
+  },
+  "test": {
+    "auc": 0.675321,
+    "log_loss": 0.634146,
+    "brier": 0.222234,
+    "ece": 0.038322,
+    "auc_ci": [
+      0.653853,
+      0.698706
+    ],
+    "log_loss_ci": [
+      0.61691,
+      0.65079
+    ],
+    "baseline_log_loss": 0.703657,
+    "log_loss_gain_vs_baseline": 0.06951,
+    "log_loss_gain_ci": [
+      0.056469,
+      0.084085
+    ],
+    "baseline_auc": 0.506159,
+    "train_only_model": {
+      "auc": 0.649557,
+      "log_loss": 0.650966,
+      "brier": 0.229496,
+      "ece": 0.045024
+    },
+    "mean_predicted": 0.420802,
+    "mean_observed": 0.418842
+  },
+  "calibration": {
+    "temperature": 0.922513,
+    "raw": {
+      "auc": 0.649557,
+      "log_loss": 0.650966,
+      "brier": 0.229496,
+      "ece": 0.045024
+    },
+    "calibrated": {
+      "auc": 0.649557,
+      "log_loss": 0.647437,
+      "brier": 0.228304,
+      "ece": 0.036131
+    }
+  },
+  "by_year": [
+    {
+      "year": 2014,
+      "n": 1624,
+      "observed": 0.2833,
+      "model": 0.3936,
+      "lookup": 0.4075
+    },
+    {
+      "year": 2015,
+      "n": 1528,
+      "observed": 0.1538,
+      "model": 0.4099,
+      "lookup": 0.3857
+    },
+    {
+      "year": 2016,
+      "n": 1748,
+      "observed": 0.4394,
+      "model": 0.3991,
+      "lookup": 0.3436
+    },
+    {
+      "year": 2017,
+      "n": 1782,
+      "observed": 0.5269,
+      "model": 0.4258,
+      "lookup": 0.328
+    },
+    {
+      "year": 2018,
+      "n": 1847,
+      "observed": 0.5322,
+      "model": 0.4158,
+      "lookup": 0.3706
+    },
+    {
+      "year": 2019,
+      "n": 897,
+      "observed": 0.6276,
+      "model": 0.5311,
+      "lookup": 0.391
+    }
+  ],
+  "by_peak": [
+    {
+      "peak": "Everest",
+      "climbers": 3040,
+      "observed": 0.4875,
+      "predicted": 0.5799,
+      "auc_model": 0.6808,
+      "auc_lookup": 0.2592
+    },
+    {
+      "peak": "Ama Dablam",
+      "climbers": 1569,
+      "observed": 0.4277,
+      "predicted": 0.4256,
+      "auc_model": 0.5716,
+      "auc_lookup": 0.397
+    },
+    {
+      "peak": "Manaslu",
+      "climbers": 934,
+      "observed": 0.4989,
+      "predicted": 0.3787,
+      "auc_model": 0.6779,
+      "auc_lookup": 0.4514
+    },
+    {
+      "peak": "Cho Oyu",
+      "climbers": 620,
+      "observed": 0.5226,
+      "predicted": 0.3182,
+      "auc_model": 0.5884,
+      "auc_lookup": 0.5192
+    },
+    {
+      "peak": "Lhotse",
+      "climbers": 468,
+      "observed": 0.312,
+      "predicted": 0.389,
+      "auc_model": 0.7395,
+      "auc_lookup": 0.1693
+    },
+    {
+      "peak": "Himlung Himal",
+      "climbers": 380,
+      "observed": 0.3895,
+      "predicted": 0.3581,
+      "auc_model": 0.5976,
+      "auc_lookup": 0.488
+    },
+    {
+      "peak": "Makalu",
+      "climbers": 302,
+      "observed": 0.3311,
+      "predicted": 0.2717,
+      "auc_model": 0.6738,
+      "auc_lookup": 0.3038
+    },
+    {
+      "peak": "Dhaulagiri I",
+      "climbers": 226,
+      "observed": 0.2212,
+      "predicted": 0.2889,
+      "auc_model": 0.7417,
+      "auc_lookup": 0.2359
+    }
+  ],
+  "split_study": [
+    {
+      "split": "random rows",
+      "train_rows": 48416,
+      "test_rows": 12105,
+      "auc": 0.8086,
+      "log_loss": 0.4862,
+      "note": "teammates on both sides"
+    },
+    {
+      "split": "random expeditions",
+      "train_rows": 48283,
+      "test_rows": 12238,
+      "auc": 0.753,
+      "log_loss": 0.5398,
+      "note": "whole expeditions held out"
+    },
+    {
+      "split": "forward in time",
+      "train_rows": 41933,
+      "test_rows": 9426,
+      "auc": 0.6496,
+      "log_loss": 0.651,
+      "note": "train to 2008, test 2014 on"
+    }
+  ],
+  "leak_study": [
+    {
+      "scenario": "booking-time features only",
+      "auc": 0.6753
+    },
+    {
+      "scenario": "+ member used oxygen",
+      "auc": 0.8597
+    },
+    {
+      "scenario": "+ member highpoint (metres)",
+      "auc": 0.9985
+    },
+    {
+      "scenario": "+ expedition ended in success",
+      "auc": 0.8601
+    }
+  ],
+  "dependence": {
+    "icc": 0.472432,
+    "mean_group_size": 5.075929,
+    "design_effect": 2.925598,
+    "effective_n": 3221.905525,
+    "naive_auc_ci": [
+      0.666205,
+      0.686138
+    ],
+    "cluster_auc_ci": [
+      0.653853,
+      0.698706
+    ],
+    "ci_width_ratio": 2.25029
+  },
+  "causal": {
+    "sample": 33087,
+    "expeditions": 5584,
+    "oxygen_used__success": {
+      "naive": 0.589518,
+      "g_computation": 0.612652,
+      "ipw": 0.539772,
+      "aipw": 0.55974,
+      "treated_share": 0.311996,
+      "treated_rate": 0.730311,
+      "control_rate": 0.140792,
+      "n": 33087,
+      "propensity_min": 0.02,
+      "propensity_max": 0.964187,
+      "aipw_ci": [
+        0.534938,
+        0.578395
+      ],
+      "risk_ratio_naive": 5.187145,
+      "e_value_naive_rr": 9.847544
+    },
+    "oxygen_used__died": {
+      "naive": 0.002214,
+      "g_computation": 0.010354,
+      "ipw": 0.013428,
+      "aipw": 0.013272,
+      "treated_share": 0.311996,
+      "treated_rate": 0.014821,
+      "control_rate": 0.012608,
+      "n": 33087,
+      "propensity_min": 0.02,
+      "propensity_max": 0.964187,
+      "aipw_ci": [
+        0.007382,
+        0.020466
+      ],
+      "risk_ratio_naive": 1.17558
+    },
+    "exp_oxygen__success": {
+      "naive": 0.257312,
+      "g_computation": 0.251378,
+      "ipw": 0.313854,
+      "aipw": 0.344638,
+      "treated_share": 0.578142,
+      "treated_rate": 0.433269,
+      "control_rate": 0.175956,
+      "n": 33087,
+      "propensity_min": 0.02,
+      "propensity_max": 0.98,
+      "aipw_ci": [
+        0.316522,
+        0.363507
+      ],
+      "risk_ratio_naive": 2.462364
+    },
+    "exp_oxygen__died": {
+      "naive": -0.003145,
+      "g_computation": 0.002985,
+      "ipw": 0.003881,
+      "aipw": 0.002509,
+      "treated_share": 0.578142,
+      "treated_rate": 0.011971,
+      "control_rate": 0.015117,
+      "n": 33087,
+      "propensity_min": 0.02,
+      "propensity_max": 0.98,
+      "aipw_ci": [
+        -0.001298,
+        0.007161
+      ],
+      "risk_ratio_naive": 0.791925
+    },
+    "placebo_permuted_aipw_mean": 4e-05,
+    "placebo_permuted_aipw_sd": 0.0037,
+    "dowhy": {
+      "sample": 8000,
+      "regression_ate": 0.616246,
+      "regression_placebo": 0.000568,
+      "regression_random_cause": 0.616229,
+      "weighting_ate": 0.552391,
+      "weighting_placebo": -0.19362,
+      "weighting_random_cause": 0.552391
+    },
+    "composition": [
+      {
+        "exp_oxygen": 0,
+        "climbers": 13958,
+        "summit_rate": 0.175956,
+        "mean_height_m": 8345.802551,
+        "share_everest_lhotse": 0.227182
+      },
+      {
+        "exp_oxygen": 1,
+        "climbers": 19129,
+        "summit_rate": 0.433269,
+        "mean_height_m": 8636.394323,
+        "share_everest_lhotse": 0.670971
+      }
+    ]
+  },
+  "oxygen_planning": {
+    "expeditions": 1095,
+    "members": 5840,
+    "sets_used": 2878,
+    "offset_sets": 0.845521,
+    "saving_per_member_vs_full": 48.047945,
+    "saving_per_member_vs_rate": 596.900685,
+    "saving_vs_rate": 3485900.0,
+    "saving_vs_rate_ci": [
+      3066710.0,
+      3878482.5
+    ],
+    "saving_vs_full": 280600.0,
+    "saving_vs_full_ci": [
+      56690.0,
+      500192.5
+    ],
+    "expedition_mae_model": 1.350564,
+    "expedition_mae_rate": 2.001868,
+    "member_auc": 0.731451,
+    "assumptions": {
+      "unused_set_usd": 800.0,
+      "missing_set_usd": 4500.0
+    },
+    "policies": [
+      {
+        "policy": "order for every member",
+        "total_cost": 2369600.0,
+        "sets_ordered": 5840.0,
+        "sets_unused": 2962.0,
+        "sets_short": 0.0,
+        "cost_per_member": 405.75
+      },
+      {
+        "policy": "peak history rate",
+        "total_cost": 5574900.0,
+        "sets_ordered": 2950.0,
+        "sets_unused": 1113.0,
+        "sets_short": 1041.0,
+        "cost_per_member": 954.61
+      },
+      {
+        "policy": "model expected demand",
+        "total_cost": 2675800.0,
+        "sets_ordered": 3745.0,
+        "sets_unused": 1241.0,
+        "sets_short": 374.0,
+        "cost_per_member": 458.18
+      },
+      {
+        "policy": "model plus safety offset",
+        "total_cost": 2089000.0,
+        "sets_ordered": 4310.0,
+        "sets_unused": 1610.0,
+        "sets_short": 178.0,
+        "cost_per_member": 357.71
+      },
+      {
+        "policy": "hindsight (exact demand)",
+        "total_cost": 0.0,
+        "sets_ordered": 2878.0,
+        "sets_unused": 0.0,
+        "sets_short": 0.0,
+        "cost_per_member": 0.0
+      }
+    ],
+    "sweep": [
+      {
+        "ratio": 1.0,
+        "offset": -0.06,
+        "saving_vs_rate": 468000.0,
+        "saving_vs_full": 1114400.0,
+        "saving_vs_expected": 36800.0
+      },
+      {
+        "ratio": 2.0,
+        "offset": 0.15,
+        "saving_vs_rate": 996000.0,
+        "saving_vs_full": 809600.0,
+        "saving_vs_expected": 31200.0
+      },
+      {
+        "ratio": 3.0,
+        "offset": 0.41,
+        "saving_vs_rate": 1652800.0,
+        "saving_vs_full": 633600.0,
+        "saving_vs_expected": 154400.0
+      },
+      {
+        "ratio": 5.62,
+        "offset": 0.85,
+        "saving_vs_rate": 3485900.0,
+        "saving_vs_full": 280600.0,
+        "saving_vs_expected": 586800.0
+      },
+      {
+        "ratio": 10.0,
+        "offset": 1.37,
+        "saving_vs_rate": 6848000.0,
+        "saving_vs_full": -800.0,
+        "saving_vs_expected": 1614400.0
+      },
+      {
+        "ratio": 20.0,
+        "offset": 1.98,
+        "saving_vs_rate": 14722400.0,
+        "saving_vs_full": -454400.0,
+        "saving_vs_expected": 4152800.0
+      }
+    ]
+  },
+  "death": {
+    "deaths_in_test": 69,
+    "death_rate": 0.00732,
+    "auc": 0.579792,
+    "auc_ci": [
+      0.501917,
+      0.654277
+    ],
+    "lookup_auc": 0.538889,
+    "top_decile_share_of_deaths": 0.130435,
+    "top_two_deciles_share": 0.304348,
+    "mean_predicted": 0.010364
+  },
+  "runtime_seconds": 241.8,
+  "fast": false
+}

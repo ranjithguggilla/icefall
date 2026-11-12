@@ -1,0 +1,6 @@
+policy,total_cost,sets_ordered,sets_unused,sets_short,cost_per_member
+order for every member,2369600.0,5840.0,2962.0,0.0,405.75342465753425
+peak history rate,5574900.0,2950.0,1113.0,1041.0,954.6061643835617
+model expected demand,2675800.0,3745.0,1241.0,374.0,458.1849315068493
+model plus safety offset,2089000.0,4310.0,1610.0,178.0,357.7054794520548
+hindsight (exact demand),0.0,2878.0,0.0,0.0,0.0

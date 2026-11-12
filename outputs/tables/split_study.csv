@@ -1,0 +1,4 @@
+split,train_rows,test_rows,auc,log_loss,note
+random rows,48416,12105,0.808565329121887,0.486176478718617,teammates on both sides
+random expeditions,48283,12238,0.7530403920609265,0.5397783603351626,whole expeditions held out
+forward in time,41933,9426,0.649557264704022,0.6509655964541379,"train to 2008, test 2014 on"
