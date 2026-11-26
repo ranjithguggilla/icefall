@@ -222,7 +222,7 @@ For a team that wants to use a model like this, the 27.5% to 41.9% drift matters
 
 ## Installation
 
-Python 3.11 or newer. I ran everything on 3.13 with the versions pinned in `requirements.txt`.
+Python 3.13 or newer. I ran everything on 3.13 with the versions pinned in `requirements.txt`; on older Pythons, dowhy 0.14 refuses the pinned scipy.
 
 ```bash
 git clone https://github.com/ranjithguggilla/icefall.git

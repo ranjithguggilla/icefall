@@ -7,7 +7,7 @@ name = "icefall"
 version = "0.1.0"
 description = "Booking-time summit odds and oxygen planning for Himalayan expeditions"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 license = { text = "MIT" }
 authors = [{ name = "Ranjith Guggilla", email = "ranjithguggilla668@gmail.com" }]
 dependencies = [
